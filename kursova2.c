@@ -9,12 +9,9 @@ struct Dictionary{
 	char exampLine[81];
 	float date;
 	float rating;
+	struct Dictionary *next;
 };
 
-struct Node{
-	struct Dictionary dic;
-	struct Node* next;
-};
 
 struct Node* readFile(FILE *fp){
 	struct Dictionary dic;
